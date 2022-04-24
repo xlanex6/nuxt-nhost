@@ -5,7 +5,9 @@
   "type": "module",
   "repository": "xlanex6/nuxt-nhost",
   "contributors": [
-    {"name": "Alex Duval <alexduval71@gmail.com>"}
+    {
+      "name": "Alex Duval <alexduval71@gmail.com>"
+    }
   ],
   "exports": {
     ".": {
@@ -21,8 +23,10 @@
   "scripts": {
     "prepack": "nuxt-module-build",
     "dev": "nuxi dev playground",
+    "lint": "eslint --ext .js,.ts,.vue .",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "release": "yarn lint && standard-version && git push --follow-tags"
   },
   "dependencies": {
     "@nhost/nhost-js": "^1.1.4",
@@ -34,6 +38,7 @@
     "@nuxt/module-builder": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
     "eslint": "latest",
-    "nuxt": "^3.0.0-rc.1"
+    "nuxt": "^3.0.0-rc.1",
+    "standard-version": "^9.3.2"
   }
 }
