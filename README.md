@@ -2,7 +2,7 @@
 
 **DO NOT USE IN PRODUCTION**
 
-is Not publish to NPM wet
+is Not publish to NPM yet
 
 ## TODO
 
