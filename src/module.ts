@@ -11,7 +11,7 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: '@nuxtjs/nhost',
+    name: 'nuxt-nhost',
     configKey: 'nhost',
     compatibility: {
       nuxt: '^3.0.0'

@@ -1,8 +1,12 @@
 {
-  "name": "@nuxtjs/nost",
+  "name": "nuxt-nhost",
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
+  "repository": "xlanex6/nuxt-nhost",
+  "contributors": [
+    {"name": "Alex Duval <alexduval71@gmail.com>"}
+  ],
   "exports": {
     ".": {
       "import": "./dist/module.mjs",

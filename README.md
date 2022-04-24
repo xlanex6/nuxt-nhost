@@ -1,4 +1,4 @@
-# @nuxtjs/nhost
+# nuxt-nhost
 
 **DO NOT USE IN PRODUCTION**
 
