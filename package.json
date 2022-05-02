@@ -29,10 +29,10 @@
     "release": "yarn lint && standard-version && git push --follow-tags"
   },
   "dependencies": {
-    "@nhost/nhost-js": "^1.1.4",
-    "@nuxt/kit": "^3.0.0-rc.1",
-    "defu": "^6.0.0",
-    "graphql": "^16.3.0"
+    "@nhost/nhost-js": "1.1.6",
+    "@nuxt/kit": "3.0.0-rc.2",
+    "defu": "6.0.0",
+    "graphql": "16.4.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "latest",
