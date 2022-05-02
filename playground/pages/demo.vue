@@ -5,8 +5,8 @@ const {auth} = useNhostClient()
 </script>
 
 <template>
-  DEMO - {{user}}
-  <pre>
-  {{auth.getUser()}}
+  DEMO PAGE - USER 
+   <pre>
+  {{user}}
   </pre>
 </template>

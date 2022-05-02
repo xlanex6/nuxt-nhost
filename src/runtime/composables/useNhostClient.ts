@@ -10,6 +10,11 @@ export const useNhostClient = (): NhostClient => {
     nuxtApp._nhostClient = new NhostClient({
       backendUrl: backendUrl
     })
+
+    // if (nuxtApp.ssrContext) {
+    //   nuxtApp._nhostClient.auth.setAuth(token.value)
+    // }
+
   }
 
   return nuxtApp._nhostClient

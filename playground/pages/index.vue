@@ -1,17 +1,24 @@
+<script setup lang="ts">
+// import { useCookie } from '#app'
+const { auth } = useNhostClient()
+const user = useNhostUser()
+const token = useToken()
+// const token = useCookie('nhostRefreshToken')
+
+
+</script>
+
 <template>
 Auth
 <p>USER</p>
 <pre>{{user}}</pre>
-{{token}}
-<button @click="auth.signIn({provider: 'github'})">LOGIN</button>
+<hr>
+<p>Token</p>
+<pre>{{token}}</pre>
+<p>Session</p>
+<pre>{{auth.getSession()}}</pre>
+<button @click="auth.signIn({provider: 'github'})">LOGIN with Github</button>
+<button @click="auth.signOut()">LOGout</button>
 <hr>
 </template>
 
-<script setup lang="ts">
-import { useCookie } from '#app'
-const { auth } = useNhostClient()
-const user = useNhostUser()
-const token = useCookie('nhostRefreshToken')
-
-
-</script>
