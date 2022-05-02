@@ -2,12 +2,12 @@
 import { defineNuxtPlugin, NuxtApp } from '#app'
 import { useNhostClient } from '../composables/useNhostClient'
 import { useNhostUser } from '../composables/useNhostUser'
-import { useToken } from '../composables/useToken'
+import { useRefreshToken } from '../composables/useRefreshToken'
 
 export default defineNuxtPlugin(async (nuxtApp: NuxtApp) => {
   const user = useNhostUser()
   const client = useNhostClient()
-  const token = useToken()
+  const token = useRefreshToken()
 
   // If user has not been set on server side (for instance in SPA), set it for client
   if (!user.value) {

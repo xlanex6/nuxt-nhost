@@ -2,7 +2,7 @@
 // import { useCookie } from '#app'
 const { auth } = useNhostClient()
 const user = useNhostUser()
-const token = useToken()
+const token = useRefreshToken()
 // const token = useCookie('nhostRefreshToken')
 
 

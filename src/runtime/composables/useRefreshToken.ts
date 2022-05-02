@@ -1,6 +1,6 @@
 import { useCookie, useRuntimeConfig } from '#app'
 
-export const useToken = () => {
+export const useRefreshToken = () => {
   const { nhost: { cookies: cookieOptions } } = useRuntimeConfig().public
   const cookieName = `${cookieOptions.name}-access-token`
 

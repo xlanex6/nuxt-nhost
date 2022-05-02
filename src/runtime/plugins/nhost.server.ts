@@ -1,12 +1,12 @@
 import { defineNuxtPlugin, NuxtApp } from '#app'
 import { useNhostClient } from '../composables/useNhostClient'
 import { useNhostUser } from '../composables/useNhostUser'
-import { useToken } from '../composables/useToken'
+import { useRefreshToken } from '../composables/useRefreshToken'
 
 export default defineNuxtPlugin(async (nuxtApp: NuxtApp) => {
   const user = useNhostUser()
   const client = useNhostClient()
-  const token = useToken()
+  const token = useRefreshToken()
 
   if (!token.value) {
     return
