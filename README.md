@@ -9,11 +9,12 @@ is Not publish to NPM yet
 - [x] init module 
 - [x] basic setup / config 
 - [x] make composables for client
-- [ ] make composables for User / token 
+- [x] make composables for User / token 
+- [x] add middelware with cookie, refresh token 
+- [x] Auth feature 
 - [ ] make composables for GRAPHQL request 
 - [ ] make composables for storage
 - [ ] make composables for fonctions
-- [ ] add middelware with cookie, refresh token 
 - [ ] Basic test with vitest
 - [ ] Add doc, base on DOCUS
 - [ ] Publish on npm 
