@@ -1,10 +1,3 @@
 <template>
-<pre>{{client}}</pre>
+  <NuxtPage />
 </template>
-
-<script setup lang="ts">
-
-const client = useNhostClient()
-const user = client.auth.getUser()
-
-</script>

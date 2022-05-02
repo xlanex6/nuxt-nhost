@@ -6,6 +6,6 @@ export default defineNuxtConfig({
     nhostModule
   ],
   nhost: {
-    backendUrl: 'https://ppmymzmmecfuzhvrcgbb.nhost.run'
+    backendUrl: 'https://idysbigbtjjtorsxqtxh.nhost.run'
   }
 })
