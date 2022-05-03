@@ -9,7 +9,9 @@ const token = useRefreshToken()
 </script>
 
 <template>
-Auth
+<div>
+
+  Auth
 <p>USER</p>
 <pre>{{user}}</pre>
 <hr>
@@ -20,5 +22,6 @@ Auth
 <button @click="auth.signIn({provider: 'github'})">LOGIN with Github</button>
 <button @click="auth.signOut()">LOGout</button>
 <hr>
+</div>
 </template>
 
