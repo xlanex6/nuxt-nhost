@@ -1,4 +1,17 @@
 {
   "private": true,
-  "name": "nuxt-nhost"
+  "name": "nuxt-nhost",
+  "engines": {
+    "node": ">=v16.14.2"
+  },
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs",
+    "lint": "eslint --ext .ts,.js,.vue ."
+  },
+  "devDependencies": {
+    "nuxt": "^3.0.0-rc.2",
+    "typescript": "^4.6.4"
+  }
 }
