@@ -2,14 +2,15 @@
 definePageMeta({
   middleware: 'auth'
 })
-const {storage} = useNhostClient()
+const {storage, auth } = useNhostClient()
 const file = ref()
 const form = ref()
 const newFileData = ref()
 
-storage.setAccessToken()
+// const RESP = await storage.setAccessToken(auth.getAccessToken())
 
-const imageUrl = await storage.getPublicUrl({fileId:"be6c60e4-abb1-4140-8ee9-1045efa22d3d"})
+const imagePublicUrl = await storage.getPublicUrl({fileId:"93b5943b-8002-46c9-8780-3a932f422785"})
+// const imageSignedUrl = await storage.getPresignedUrl({fileId:"be6c60e4-abb1-4140-8ee9-1045efa22d3d"})
 
 function onFileChanged($event) {
   const target = $event.target;
@@ -21,8 +22,7 @@ function onFileChanged($event) {
 async function uploadFile() {
   if (file.value) {
       try {
-        const {error, fileMetadata } = await storage.upload({ file: file.value })
-        debugger
+        const {error, fileMetadata } = await storage.upload({ file: file.value, uploadedByUserId: "uuid" })
         newFileData.value = fileMetadata
       } catch (error) {
           console.error(error);
@@ -41,7 +41,7 @@ async function uploadFile() {
   <h1>Storage</h1>
   <label for="avatar">Choose a profile picture:</label>
 
-  <img :src="`${imageUrl}?w=300&q=90`" alt="DS">
+  <img :src="`${imagePublicUrl}?w=300&q=90`" alt="DS">
 
     <input
       type="file"
