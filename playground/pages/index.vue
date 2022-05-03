@@ -2,7 +2,8 @@
 // import { useCookie } from '#app'
 const { auth } = useNhostClient()
 const user = useNhostUser()
-const token = useRefreshToken()
+const refreshToken = useRefreshToken()
+const accessToken = useAccessToken()
 // const token = useCookie('nhostRefreshToken')
 
 
@@ -15,8 +16,8 @@ const token = useRefreshToken()
 <p>USER</p>
 <pre>{{user}}</pre>
 <hr>
-<p>Token</p>
-<pre>{{token}}</pre>
+<p>Access Token</p>
+<pre>{{accessToken}}</pre>
 <p>Session</p>
 <pre>{{auth.getSession()}}</pre>
 <button @click="auth.signIn({provider: 'github'})">LOGIN with Github</button>
