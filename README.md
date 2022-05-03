@@ -11,7 +11,7 @@ is Not publish to NPM yet
 - [x] make composables for client
 - [x] make composables for User / token 
 - [x] add middelware with cookie, refresh token 
-- [ ] add middelware in demo to protect route is not login
+- [ ] add middelware in demo to protect route if not login
 - [x] Auth feature READY
 - [ ] Auth refacto ( accessToken != refeshToken) => composables useAccessToken if needed in server side ( JWT / role  )
 - [ ] make composables for GRAPHQL request ?
