@@ -1,10 +1,11 @@
+import type { Ref } from 'vue'
+import { useState } from '#app'
 import { useNhostClient } from './useNhostClient'
-export const useAccessToken = () => {
+
+export const useAccessToken = (): Ref<String | null> => {
   const { auth } = useNhostClient()
-// TS should be good, useState
-  return auth.getAccessToken()
+  const accessToken = auth.getAccessToken()
+
+  return useState<String | null>('nhost_access_token', () => accessToken)
+  
 }
-
-
-
-

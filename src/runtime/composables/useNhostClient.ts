@@ -11,9 +11,9 @@ export const useNhostClient = (): NhostClient => {
       backendUrl: backendUrl
     })
 
-    // if (nuxtApp.ssrContext) {
-    //   nuxtApp._nhostClient.auth.setAuth(token.value)
-    // }
+    if (nuxtApp.ssrContext) {
+      nuxtApp.provide('superUser', {id:123})
+    }
 
   }
 

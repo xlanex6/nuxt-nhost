@@ -54,6 +54,10 @@ export default defineNuxtModule<ModuleOptions>({
       handler: resolve(runtimeDir, 'server/api/session')
     })
 
+    addServerMiddleware({
+      handler: resolve(runtimeDir, 'server/middleware/user')
+    })
+
     // // Optimize cross-fetch
     // extendViteConfig((config) => {
     //   config.optimizeDeps = config.optimizeDeps || {}
